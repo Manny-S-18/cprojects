@@ -32,7 +32,7 @@ int get_s_pop(void)
     {
         start_pop = get_int("What is your starting population?: ");
     }
-    while(start_pop < 9);
+    while (start_pop < 9);
     return start_pop;
 }
 
@@ -45,7 +45,7 @@ int get_e_pop(int start_pop)
     {
         end_pop = get_int("What is your ending population? : ");
     }
-    while(end_pop < start_pop);
+    while (end_pop < start_pop);
 
     return end_pop;
 }
@@ -67,16 +67,16 @@ void n_years(int start_pop, int end_pop)
 
     {
 
-    double curr_pop = start_pop;
-    double inc = 1.3333333f;
-    double dec = 0.25f;
-    int n_years = -1;
-    while (curr_pop < end_pop)
-    {
-        curr_pop = ceil((curr_pop*inc) - (curr_pop*dec));
-        n_years++;
-    }
-    printf("Years: %d\n", n_years);
+        double curr_pop = start_pop;
+        double inc = 1.3333333f;
+        double dec = 0.25f;
+        int n_years = -1;
+        while (curr_pop < end_pop)
+        {
+            curr_pop = ceil((curr_pop * inc) - (curr_pop * dec));
+            n_years++;
+        }
+        printf("Years: %d\n", n_years);
 
 
     }
